@@ -1,0 +1,17 @@
+<section class="mt-2 pt-2">
+
+   
+
+    <div class="row g-3 "> 
+        <div class="col-md-3 " [routerLink]="['/brandDetails',item._id]" role="button" *ngFor="let item of brands">
+    
+            <div><img [src]="item.image" [alt]="item.name">
+                
+            
+            </div>
+    
+    
+        </div>
+        
+   </div>
+</section>

@@ -1,0 +1,69 @@
+<nav #navBlank class="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 w-100 z-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./assets/images/freshcart-logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link text-capitalize fw-semibold" routerLink="home" routerLinkActive="active-link">home</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link text-capitalize fw-semibold" routerLink="products" routerLinkActive="active-link">products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize fw-semibold" routerLink="categories" routerLinkActive="active-link">categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize fw-semibold" routerLink="brands" routerLinkActive="active-link">brands</a>
+          </li>
+         
+          
+        </ul>
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+         
+
+          <li class="nav-item">
+            <a class="nav-link text-capitalize position-relative" routerLink="/wishlist" > <i class="fa-solid fa-heart fa-2x text-danger"></i>
+            <span class="badge bg-info position-absolute top-0 end-0">{{wishlistCount }}</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-capitalize position-relative" routerLink="cart" > <i class="fa-solid fa-cart-shopping  text-main fa-2x"></i>
+            <span class="badge bg-info position-absolute top-0 end-0">{{cartNum}}</span></a>
+          </li>
+          
+           
+
+              <li class="nav-item dropdown ms-2 me-4">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-user fa-lg text-main"></i>
+                </a>
+                <ul class="dropdown-menu">
+    
+                  <li class="nav-item">
+                    <a routerLink="/forgetpassword" role="button" >chane password</a>
+    
+                  </li>
+                  
+                  
+                 
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-capitalize cursor-pointer fw-semibold" (click)="logOut()">SignOut</a>
+              </li>
+           
+           
+            
+          </ul>
+       
+      </div>
+    </div>
+  </nav>
